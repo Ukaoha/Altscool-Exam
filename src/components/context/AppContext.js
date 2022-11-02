@@ -15,9 +15,9 @@ export const AppContextProvider = ({ children }) => {
 		try {
 			let URL =  `https://api.github.com/users/${username}`;
 			let response = await axios.get(URL);
-			setData(response.data.results);
+			setData(response.data);
 			setLoading(false);
-			console.log(response.data.results);
+			console.log(response.data);
 			
 		} catch (error) {
 			setData([]);
