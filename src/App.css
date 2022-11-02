@@ -1,0 +1,20 @@
+:root{
+    --primary-color: #0079ff; 
+ --dark-color: #141d2f;
+ --white-color: #fff; color: var(--white-color);
+ --secondary-color: #1e2a47;
+     fill: var(--white-color);
+ --main-background-color: #f6f8ff;
+ --main-white-color: #fefefe;
+ --black-color: #222731;
+ 
+ --hover-dark-color: #90a4d4;
+ 
+ --light-gray-color: #697c9a;
+ --light-pale-blue: #4b6a9b;
+ --light-dark-gray: #2b3442;
+ 
+ }
+ h1{
+    color: black;
+ }
