@@ -1,0 +1,72 @@
+#pagination-wrapper {
+	/* background-color: #ed1c24; */
+	background-color: rgb(1, 1, 34);
+	color: white;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+#pagination-wrapper #content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#pagination-wrapper div {
+	flex: 1;
+}
+
+#pagination-wrapper .control {
+	/* background-color: #ed1c24; */
+	background-color: #2752db;
+
+	color: #fff;
+	width: fit-content;
+	padding: 10px;
+	border-radius: 8px;
+	transition: background-color 0.5s ease;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+#pagination-wrapper .control:disabled {
+	cursor: not-allowed;
+	color: white;
+	 background-color: #2752db;
+
+}
+
+#pagination-wrapper .control:not(#pagination-wrapper .control:disabled):hover {
+	background-color: gray;
+}
+
+#pagination-wrapper #next {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#pagination-wrapper #buttons-container {
+	flex: 2;
+	display: flex;
+	justify-content: space-around;
+
+}
+
+#pagination-wrapper #buttons-container button {
+	outline: none;
+	border: none;
+	background-color: rgb(1, 1, 34);
+	color: white;
+	cursor: pointer;
+	/* padding: 8px; */
+	border-radius: 8px;
+	transition: background-color 0.5s ease;
+}
+
+#pagination-wrapper #buttons-container button.active {
+	color: blue !important;
+}
+
+#pagination-wrapper #buttons-container button:hover {
+	color: #fff;
+}

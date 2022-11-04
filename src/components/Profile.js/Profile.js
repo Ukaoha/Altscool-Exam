@@ -2,11 +2,13 @@ import {FaHeart} from 'react-icons/fa';
 import './Profile.css';
 // import {mdlightMode} from 'react-icons/fa';
 import { useContext } from "react";
+import { Link } from 'react-router-dom';
+
 import { AppContext } from "../context/AppContext";
 
 
 const Profile = () => {
-    const { data, username, setUsername, loading ,  fetchUser } = useContext(AppContext);
+    const { data, username, setUsername, loading ,  fetchUser , fetchRepo} = useContext(AppContext);
 
     // const [data , setData] = useState({});
     // const [username, setUsername] = useState("");
@@ -99,6 +101,10 @@ const Profile = () => {
 
       </section>
 
+      <section>
+                <Link to="/repo" onClick= {fetchRepo} >Repo</Link>
+
+      </section>
 
 
 

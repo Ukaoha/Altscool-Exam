@@ -8,6 +8,7 @@ export const AppContextProvider = ({ children }) => {
     const [username, setUsername] = useState("");
 	const [loading, setLoading] = useState(false);
 	const [page, setPage] = useState(1);
+	const[repos, setRepo] = useState([])
 	const [error, setError] = useState(null);
 
 	const fetchUser = async () => {
@@ -15,6 +16,10 @@ export const AppContextProvider = ({ children }) => {
 		try {
 			let URL =  `https://api.github.com/users/${username}`;
 			let response = await axios.get(URL);
+			// let repositories = await axios.get(response.repos_url)
+			// setPage(repositories.data)
+			// console.log(repositories);
+			
 			setData(response.data);
 			setLoading(false);
 			console.log(response.data);
@@ -28,7 +33,7 @@ export const AppContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		fetchUser();
-	}, [page]);
+	}, [repos]);
 
 	return (
 		<AppContext.Provider
@@ -41,6 +46,8 @@ export const AppContextProvider = ({ children }) => {
                 setUsername,
 				page,
 				setPage,
+				repos,
+				setRepo,
 				fetchUser,
 				error,
 			}}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 class ErrorBoundary extends React.Component {
     constructor(props) {
         super(props)
@@ -19,7 +20,10 @@ class ErrorBoundary extends React.Component {
 
     render() {
         if(this.state.hasError){
-		return  <h1>Ooops something went wrong , Note: this Error was done on purpose</h1>
+		return  <h1>Ooops something went wrong , Note: this Error was done on purpose please go back   
+                 <Link to="/">Home</Link>
+
+        </h1>
 
       
            }
