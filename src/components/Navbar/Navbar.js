@@ -10,7 +10,7 @@ const Navbar = () => {
       <span className="nav-logo">DevFinder</span>
       <div className={`nav-items ${isOpen && "open"}`}>
         <Link to="/">Home</Link>
-        <Link to="/repo">Repo</Link>
+        {/* <Link to="/repo">Repo</Link> */}
         <Link to="/error-example">Test Error</Link>
         <Link to="/contact">Contact</Link>
       </div>

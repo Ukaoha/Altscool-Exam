@@ -22,7 +22,8 @@ function App() {
       <Route path='/error-example' element={<ErrorExample/>}/>
 
 
-      <Route path='/repo' element={<Repo/>}/>
+      <Route path='/repo/:username' element={<Repo/>}/>
+
       <Route path='*' element={<NotFound/>}/>
 
 

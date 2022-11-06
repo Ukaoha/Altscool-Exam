@@ -1,21 +1,36 @@
-import PaginationRepo from "../components/Paginate/PaginationRepo";
-// import { useContext } from "react";
-// import { AppContext } from "../context/AppContext";
-import { Pagination } from 'semantic-ui-react'
+import { useState } from "react";
+
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import Pagination from "../components/Paginate/Pagination";
 
 
-
-import ListRepos from "../components/ListRepos/ListRepos";
 
 const Repo = () => {
-    // const { data, repos, setRepo, loading } = useContext(AppContext)
+    const [repo, setRepo] = useState([]);
+    const [loading,setLoading] = useState(true);
+    let {username} = useParams()
+    const fetchRepo = async () => {
+        try {
+            console.log(username)
+			let URLRepo =  `https://api.github.com/users/${username}/repos`;
+			let response = await axios.get(URLRepo);
+            setRepo(response.data)
+            setLoading(false);
+			console.log(response.data);
+        
+        } catch (error) {
+            console.error('error')
+        }
+    }
+
+    if (username) {
+        fetchRepo()
+    }
 
     return ( <>
-    {/* <h1 className="repo">Repo</h1> */}
-    {/* <PaginationRepo/> */}
-    {/* <ListRepos/> */}
-    {/* <Pagination  /> */}
-    {/* <Pagination repos={repos} setRepo={setRepo} loading={loading} /> */}
+    <h1 className="repo">Repo</h1>
+    <Pagination data={repo}/>
 
 
     </> );

@@ -10,9 +10,6 @@ import { AppContext } from "../context/AppContext";
 const Profile = () => {
     const { data, username, setUsername, loading ,  fetchUser , fetchRepo} = useContext(AppContext);
 
-    // const [data , setData] = useState({});
-    // const [username, setUsername] = useState("");
-    // const [error, setError] = useState(null);
 
 
     const userInput = e =>{
@@ -64,6 +61,11 @@ const Profile = () => {
   <div className="bio_wrap">
     <p>{data.bio}</p>
   </div>
+  <div className="repositories">
+    <Link to={`/repo/${username}`}>Plese view repositories</Link>
+
+    </div>
+
   <div className="repos__container">
     <div className="repos">
       <h4>Public Repos</h4>
@@ -93,18 +95,17 @@ const Profile = () => {
     </div>
 
 
-
-
   </div>
 
-      {/* </div> */}
+    
 
       </section>
 
-      <section>
-                <Link to="/repo" onClick= {fetchRepo} >Repo</Link>
+      {/* <section>
 
-      </section>
+      <Link to={`/repo/${username}`}>Repo</Link>
+
+      </section> */}
 
 
 

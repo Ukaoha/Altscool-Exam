@@ -93,7 +93,12 @@ color: var(--main-background-color);
     cursor: pointer;
   
 }
-
+.repositories{
+  text-align: center;
+}
+.repositories a {
+  text-decoration: none;
+}
 .username_container{
     background-color: var(--main-background-color);
     box-shadow: 0 0 8rem rgba(0 0 0 / 0.075);

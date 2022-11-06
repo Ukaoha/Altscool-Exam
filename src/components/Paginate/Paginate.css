@@ -1,72 +1,137 @@
-#pagination-wrapper {
-	/* background-color: #ed1c24; */
-	background-color: rgb(1, 1, 34);
+.item {
+    align-items: center;
+    color: #FFF;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+  }
+  
+  .disabled-page {
+    color: #808e9b;
+  }
+  
+  .active {
+    border: solid 1px #808e9b;
+    border-radius: 40px;
+    color: #808e9b;
+  }
+  
+  .break-me {
+  }
+  
+  .next {
+    border-left: solid 1px #808e9b;
+    font-size: 4px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    width: 150px;
+  }
+  
+  .pagination {
+     align-items: center;
+     margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 60px;
+    list-style-type: none;
+    position: relative;
+    width: 80%; 
+    background-color: rgb(1, 1, 34);
 	color: white;
 	padding: 10px;
 	border-radius: 8px;
+
+  }
+  
+  .pagination-page {
+    font-weight: 700;
+  }
+  
+  .previous {
+    border-right: solid 1px #808e9b;
+    font-size: 4px;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    width: 150px;
+
+   
+
+  }
+  .nex-link{
+    color: white;
+    font-size: 2rem;
+  }
+  .previous-link{
+    color: white;
+    font-size: 2rem;
+
+  }
+
+
+  .list-users {
+	width: 60%;
+	margin: 0 auto;
+	position: relative;
+	top: 4rem;
+	min-height: 60vh;
+	margin-bottom: 7rem;
+	height: auto;
 }
 
-#pagination-wrapper #content {
+.list-users .info {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 10px;
 }
 
-#pagination-wrapper div {
-	flex: 1;
+.list-users .info p {
+	color:  #2752db;
+}
+.list-users .info h2 {
+	color:  #2752db;
 }
 
-#pagination-wrapper .control {
-	/* background-color: #ed1c24; */
-	background-color: #2752db;
 
-	color: #fff;
-	width: fit-content;
+.list-users h2 {
+	color: #05224b;
+	font-size: 25px;
+}
+
+.list-users .list-item {
 	padding: 10px;
-	border-radius: 8px;
-	transition: background-color 0.5s ease;
-	cursor: pointer;
-	font-size: 16px;
-}
+	background-color: #ddd;
+	margin-bottom: 15px;
+	
 
-#pagination-wrapper .control:disabled {
-	cursor: not-allowed;
-	color: white;
-	 background-color: #2752db;
-
-}
-
-#pagination-wrapper .control:not(#pagination-wrapper .control:disabled):hover {
-	background-color: gray;
-}
-
-#pagination-wrapper #next {
 	display: flex;
-	justify-content: flex-end;
+	align-items: center;
+	gap: 10px;
+}
+ .list-item .item-p p{
+	color: blue;
 }
 
-#pagination-wrapper #buttons-container {
-	flex: 2;
-	display: flex;
-	justify-content: space-around;
-
+.list-users .list-item img {
+	border-radius: 50%;
 }
 
-#pagination-wrapper #buttons-container button {
-	outline: none;
-	border: none;
-	background-color: rgb(1, 1, 34);
-	color: white;
-	cursor: pointer;
-	/* padding: 8px; */
-	border-radius: 8px;
-	transition: background-color 0.5s ease;
+.list-users .list-item p {
+	color: black;
+	font-weight: bold;
 }
 
-#pagination-wrapper #buttons-container button.active {
-	color: blue !important;
+.list-users .list-item .email {
+	color: gray;
+	font-weight: 600;
 }
 
-#pagination-wrapper #buttons-container button:hover {
-	color: #fff;
+.list-users .pagination-wrapper {
+	margin-top: 25px;
 }
