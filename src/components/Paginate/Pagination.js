@@ -39,23 +39,23 @@ const Pagination = (props) => {
 				<h2>Repositories</h2>
 				<p>Page</p>
 			</div>
-			</div>
+		
 
-			<div className="list-item">
-        <div className="flex flex-col justify-between items-center w-full h-full px-2 2xl:px-16">
+			<div >
+        <div className="list-item">
           {repos.map((repos) => (
             <div
-              className="bg-[#1b1b1b] block md:flex md:p-6 p-4 m-4 items-center justify-between md:w-[90%] w-[95%] rounded-lg shadow-md"
+            className="repo-name"
               key={repos.id}
             >
-              <h2 className="text-xl font-bold">
+              <h2>
                 NAME: {repos.name}
                 <br />
                 <div className="block">REPO &nbsp; ID: {repos.id}</div>
               </h2>
-              <div className="md:mt-6 mt-2 flex justify-center items-center">
+              <div  className="repo-bottom">
                 <Link rel="canonical" to={`/repo/${repos.id}`} state={repos}>
-                  <button className="text-[#1b1b1b] hover:bg-[#c0efff] bg-white font-bold py-2 px-12 rounded-xl">
+                  <button >
                     View Repo
                   </button>
                 </Link>
@@ -63,6 +63,7 @@ const Pagination = (props) => {
             </div>
           ))}
         </div>
+      </div>
       </div>
       <div id='pagination-wrapper'>
       <ReactPaginate
@@ -73,16 +74,6 @@ const Pagination = (props) => {
         pageCount={pageCount}
         previousLabel="< previous"
         renderOnZeroPageCount={null}
-        // containerClassName="flex justify-center items-center py-5 text-xl"
-        // pageClassName="px-2"
-        // pageLinkClassName="text-[#fff] hover:text-[#c0efff]"
-        // previousClassName="px-2"
-        // previousLinkClassName="text-[#fff] hover:text-[#c0efff]"
-        // nextClassName="px-2"
-        // nextLinkClassName="text-[#fff] hover:text-[#c0efff]"
-        // breakClassName="px-2"
-        // breakLinkClassName="text-[#fff] hover:text-[#c0efff]"
-        // activeClassName="text-[#c0efff]"
         containerClassName={"pagination"}
         pageClassName={'item Pagination-page'}
         pageLinkClassName="pagelink"

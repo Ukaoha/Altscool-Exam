@@ -29,7 +29,6 @@ const Repo = () => {
     }
 
     return ( <>
-    <h1 className="repo">Repo</h1>
     <Pagination data={repo}/>
 
 

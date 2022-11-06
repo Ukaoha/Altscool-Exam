@@ -75,20 +75,17 @@
 
 
   .list-users {
-	width: 60%;
-	margin: 0 auto;
-	position: relative;
-	top: 4rem;
-	min-height: 60vh;
-	margin-bottom: 7rem;
-	height: auto;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
 }
 
 .list-users .info {
 	display: flex;
+  margin-top: 20px;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 10px;
+
 }
 
 .list-users .info p {
@@ -104,32 +101,22 @@
 	font-size: 25px;
 }
 
-.list-users .list-item {
+.list-item {
 	padding: 10px;
 	background-color: #ddd;
-	margin-bottom: 15px;
+	margin: 20px auto;
+  
 	
 
-	display: flex;
-	align-items: center;
-	gap: 10px;
-}
- .list-item .item-p p{
-	color: blue;
-}
 
-.list-users .list-item img {
-	border-radius: 50%;
 }
-
-.list-users .list-item p {
-	color: black;
-	font-weight: bold;
+.list-item .repo-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-bottom:2px  #05224b00;
 }
-
-.list-users .list-item .email {
-	color: gray;
-	font-weight: 600;
+.repo-bottom {
+  border-color: 2px #05224b;
 }
 
 .list-users .pagination-wrapper {
