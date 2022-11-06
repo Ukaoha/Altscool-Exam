@@ -82,16 +82,16 @@ const Profile = () => {
   </div>
   <div className="location__container">
     <div className="location">
-      <span><i class="fa-solid fa-location-dot"></i>{data.location}</span>
+      <span><i className="fa-solid fa-location-dot"></i>{data.location}</span>
     </div>
     <div className="location">
-    <span><i class="fa-brands fa-twitter-square"></i><a target="_blank" href="${data.twitter_username}">Twitter</a></span>
+    <span><i className="fa-brands fa-twitter-square"></i><a target="_blank" href="${data.twitter_username}">Twitter</a></span>
   </div>
   <div className="location">
-  <span> <i class="fa-solid fa-link"></i><a target="_blank" href="${data.html_url}">Visit profile</a></span>
+  <span> <i className="fa-solid fa-link"></i><a target="_blank" href="${data.html_url}">Visit profile</a></span>
   </div>
   <div className="location">
-      <span><i class="fa-solid fa-building"></i>{data.company}</span>
+      <span><i className="fa-solid fa-building"></i>{data.company}</span>
     </div>
 
 
@@ -101,11 +101,6 @@ const Profile = () => {
 
       </section>
 
-      {/* <section>
-
-      <Link to={`/repo/${username}`}>Repo</Link>
-
-      </section> */}
 
 
 
