@@ -1,7 +1,7 @@
 import {FaHeart} from 'react-icons/fa';
 import './Profile.css';
 import { InfinitySpin } from "react-loader-spinner";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 // import {mdlightMode} from 'react-icons/fa';
 import { useContext } from "react";
