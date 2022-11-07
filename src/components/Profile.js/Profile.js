@@ -1,5 +1,8 @@
 import {FaHeart} from 'react-icons/fa';
 import './Profile.css';
+import { InfinitySpin } from "react-loader-spinner";
+import { Helmet } from "react-helmet-async";
+
 // import {mdlightMode} from 'react-icons/fa';
 import { useContext } from "react";
 import { Link } from 'react-router-dom';
@@ -15,11 +18,27 @@ const Profile = () => {
     const userInput = e =>{
         setUsername(e.target.value);
     }
-
+    if (loading) {
+      return (
+        <div className="flex justify-center items-center h-screen">
+          <InfinitySpin width="200" color="#fff" />
+        </div>
+      );
+    }
+  
 
 
     return (  
         <>
+              <Helmet>
+        <title>Users Profile</title>
+        <meta
+          name="description"
+          content="Users  Github Repositries"
+        />
+        <link rel="canonical" to={`/repo/:repoId`} />
+      </Helmet>
+
         <main>
             <div className="title">
                 <h2>DevFinder</h2>
@@ -88,10 +107,10 @@ const Profile = () => {
       <span><i className="fa-solid fa-location-dot"></i>{data.location}</span>
     </div>
     <div className="location">
-    <span><i className="fa-brands fa-twitter-square"></i><a target="_blank" href="${data.twitter_username}">Twitter</a></span>
+    <span><i className="fa-brands fa-twitter-square"></i><Link target="_blank" to={data.twitter_username}>Twitter</Link></span>
   </div>
   <div className="location">
-  <span> <i className="fa-solid fa-link"></i><a target="_blank" href="${data.html_url}">Visit profile</a></span>
+  <span> <i className="fa-solid fa-link"></i><Link target="_blank" to={data.html_url}>Visit profile</Link></span>
   </div>
   <div className="location">
       <span><i className="fa-solid fa-building"></i>{data.company}</span>
