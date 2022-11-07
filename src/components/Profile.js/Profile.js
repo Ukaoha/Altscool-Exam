@@ -8,14 +8,14 @@ import { AppContext } from "../context/AppContext";
 
 
 const Profile = () => {
-    const { data, username, setUsername, loading ,  fetchUser , fetchRepo} = useContext(AppContext);
+    const { data, username, setUsername, loading ,  fetchUser} = useContext(AppContext);
 
 
 
     const userInput = e =>{
         setUsername(e.target.value);
     }
-    
+
 
 
     return (  
@@ -38,6 +38,9 @@ const Profile = () => {
         />
         <button type="button" className="search_btn" onClick= {fetchUser} >Search</button>
       </section>
+      
+        
+      
       <section className="username_container">
       <div className="bio-update">
       <div>
@@ -100,6 +103,8 @@ const Profile = () => {
     
 
       </section>
+
+
 
 
 

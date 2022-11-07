@@ -3,7 +3,11 @@ import {Link} from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import "./Paginate.css";
 import Helmet from "react-helmet";
+import { useParams } from "react-router-dom";
+
+
 const Pagination = (props) => {
+  let {username} = useParams();
 
 	const { data } = props;
 	const [repos, setRepos] = useState([]);
@@ -54,7 +58,8 @@ const Pagination = (props) => {
                 <div className="block">REPO &nbsp; ID: {repos.id}</div>
               </h2>
               <div  className="repo-bottom">
-                <Link rel="canonical" to={`/repo/${repos.id}`} state={repos}>
+                <Link rel="canonical" to={`/repo/${username}${repos.id}`} state={repos}>
+
                   <button >
                     View Repo
                   </button>

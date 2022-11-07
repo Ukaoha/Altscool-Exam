@@ -110,7 +110,7 @@ color: var(--main-background-color);
     border-radius: 0.75rem;
     padding: 3rem 1.5rem;
     margin-bottom: 20px;
-    /* display: none; */
+    display: none;
   }
 .bio-update{
   display: flex;
