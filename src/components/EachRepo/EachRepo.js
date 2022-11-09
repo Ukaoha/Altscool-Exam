@@ -21,7 +21,7 @@ const  EachRepo = () => {
         }).then(() => {
           setLoading(false);
         });
-      }, []);
+      }, [URL]);
 
 
       if (loading) {
